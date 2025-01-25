@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="clockStyles.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="header">
+          <h1><i class="fa-solid fa-clock"></i> Clock</h1>
+        </div>
+        <div class="clock-display">
+          <div class="clock" id="clockDisplay">
+            <div class="time" id="timeDisplay">00:00:00</div>
+            <div class="date" id="dateDisplay">00/00/0000</div>
+          </div>
+        </div>
+        <footer>
+          <h3>Navigation</h3>
+          <nav>
+            <button class="btn pages-btn" onclick="window.location = 'taskManager.html'">Task Manager</button>
+            <button class="btn pages-btn" onclick="window.location = 'calendar.html'">Calendar</button>
+          </nav>
+        </footer>
+      </div>
+      <!-- Main -->
+      <div class="main-content">
+        <div class="header main-header">
+          <h2>Timer</h2>
+        </div>
+        <div class="timer-section">
+          <div class="timer">
+            <div class="time" id="time">00:00:00</div> 
+          </div>
+          <div class="timer-btns">
+            <button class="btn timer-btn" id="startBtn" onclick="startClock()"><i class="fas fa-play"></i> Start</button>
+            <button class="btn timer-btn" id="pauseBtn" onclick="pauseClock()"><i class="fas fa-pause"></i> Pause</button>
+            <button class="btn timer-btn" id="resetBtn" onclick="resetClock()"><i class="fas fa-redo"></i> Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- JS Script -->
+    <script src="clockApp.js"></script>
+  
+  </body>
+</html>
