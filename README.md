@@ -1,0 +1,1 @@
+This is a proyect I started to learn the basics of web development and typescript. Now I want to share it so people can learn too. If you have any ideas, new features or fixes, feel free to comment them and add them to the NewFEatures branch.
