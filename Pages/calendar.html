@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS Styles -->
+    <!--<link rel="stylesheet" href="/styles/taskStyles.css">-->
+    <link rel="stylesheet" href="/styles/calendarStyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="header">
+          <h1><i class="fa-solid fa-calendar"></i> Calendar</h1>
+        </div>
+        <div class="input-section">
+          <input
+            type="text"
+            id="taskTitle"
+            placeholder="What's your next big task?"
+          />
+          <textarea
+            id="taskDescription"
+            placeholder="Add details about your task (optional)"
+          ></textarea>
+          <input type="date" id="due-date" title="Due Date" />
+          <select id="priority" title="Priority">
+            <option value="Low-Priority">Low Priority</option>
+            <option value="Medium-Priority">Medium Priority</option>
+            <option value="High-Priority">High Priority</option>
+          </select>
+          <button class="btn" id="addBtn">
+            <i class="fas fa-plus"></i> Create Task Reminder
+          </button>
+        </div>
+        <div class="footer">
+          <h3>Navigation</h3>
+          <nav>
+            <button class="btn pages-btn" onclick="window.location = 'taskManager.html'">Task Manager</button>
+            <button class="btn pages-btn" onclick="window.location = 'clock.html'">Clock</button>
+          </nav>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="main-header">
+          <h2 class="month-display"></h2>
+          <button class="BF-arrow" id="month-backward" title="monthBackward">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="BF-arrow" id="month-forward" title="monthForward">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="calendar">
+          <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+          </div>
+          <div class="days" id="calendar-display"></div>
+          <div class="pop-up" id="popup">
+            <div class="pop-up-content">
+              <div class="pop-up-header">
+                <h2 id="task-title"></h2>
+              </div>
+              <div class="pop-up-body">
+                <p id="task-desc"></p>
+                <p id="task-date"></p>
+                <p id="task-priority"></p>
+              </div>
+              <div class="pop-up-footer">
+                <button class="btn edit-btn" id="edit-btn" title="Edit"><i class="fas fa-edit"></i></button>
+                <button class="btn delete-btn" id="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/dist/calendarApp.js" defer></script>
+  </body>
+</html>

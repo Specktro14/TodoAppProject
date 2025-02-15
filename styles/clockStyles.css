@@ -91,8 +91,8 @@ nav .pages-btn {
 }
 
 nav .pages-btn:hover {
-  background-color: rgba(255, 255, 255, 0.2);
   background-color: #ffb84d;
+  color: #050b2c;
   transform: translateY(-2px);
 }
 
@@ -109,7 +109,7 @@ footer h3 {
   justify-content: center;
 }
 
-#time {
+#timerDisplay {
   font-size: 5rem;
   font-weight: 700;
   text-align: center;
@@ -120,3 +120,53 @@ footer h3 {
   width: 100%;
 }
 
+.timer-btns {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.timer-btn {
+  background-color: #ffa509;
+  color: #050b2c;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.timer-btn:hover {
+  background-color: #ffb84d;
+  transform: translateY(-2px);
+}
+
+#startBtn {
+  background-color: #00b894;
+}
+
+#startBtn:hover {
+  background-color: #00cc99;
+}
+
+#pauseBtn {
+  background-color: #ff7675;
+}
+
+#pauseBtn:hover {
+  background-color: #ff9999;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+  
+}

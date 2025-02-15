@@ -131,7 +131,7 @@ body {
   transform: translateY(-2px);
 }
 
-#allBtn:focus, #pendingBtn:focus, #completedBtn:focus {
+#allBtn:active, #pendingBtn:active, #completedBtn:active {
   background-color: #ffa509;
   color: #050b2c;
 }
@@ -290,6 +290,12 @@ nav .pages-btn {
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 8px;
+}
+
+nav .pages-btn:hover {
+  background-color: #ffb84d;
+  color: #050b2c;
+  transform: translateY(-2px);
 }
 
 /* Responsive styles */

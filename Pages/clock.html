@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <!-- CSS Styles -->
-    <link rel="stylesheet" href="clockStyles.css">
+    <link rel="stylesheet" href="/styles/clockStyles.css">
   </head>
   <body>
     <div class="container">
@@ -39,20 +39,20 @@
         <div class="header main-header">
           <h2>Timer</h2>
         </div>
-        <div class="timer-section">
+        <div class="timer-section" id="timerSection">
           <div class="timer">
-            <div class="time" id="time">00:00:00</div> 
+            <div class="time" id="timerDisplay">00:00:00</div> 
           </div>
           <div class="timer-btns">
-            <button class="btn timer-btn" id="startBtn" onclick="startClock()"><i class="fas fa-play"></i> Start</button>
-            <button class="btn timer-btn" id="pauseBtn" onclick="pauseClock()"><i class="fas fa-pause"></i> Pause</button>
-            <button class="btn timer-btn" id="resetBtn" onclick="resetClock()"><i class="fas fa-redo"></i> Reset</button>
+            <button class="btn timer-btn" id="startBtn" onclick="startTimer()"><i class="fas fa-play"></i> Start</button>
+            <button class="btn timer-btn" id="pauseBtn" onclick="pauseTimer()"><i class="fas fa-pause"></i> Pause</button>
+            <button class="btn timer-btn" id="resetBtn" onclick="resetTimer()"><i class="fas fa-redo"></i> Reset</button>
           </div>
+
         </div>
       </div>
     </div>
     <!-- JS Script -->
-    <script src="clockApp.js"></script>
-  
+    <script type="module" src="/dist/clockApp.js"></script>
   </body>
 </html>
